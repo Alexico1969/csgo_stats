@@ -2,6 +2,7 @@ import os
 import requests, json
 from flask import Flask,redirect,url_for,render_template,request
 from steam_api import get_csgo3, get_csgo4, get_csgo5
+from helper import fill_till
 
 app = Flask(__name__)
 
@@ -63,12 +64,47 @@ def last():
     print(">>> output1", output1)
     #output1['last_match_wins'] = "99999"
     return render_template('last.html', output1=output1)
-if __name__ == '__main__':
-    #DEBUG is SET to TRUE. CHANGE FOR PROD
-    app.run(port=5000,debug=True)
+
 
 @app.route('/api',methods=['GET','POST'])
 def api():
     data = get_csgo5()
     print(">>> output1", data)
-    return data
+    output = "```"
+    output += "-------------------------------------------- \n"
+    output += "| Player    | Kills | Deaths | Damage done | \n"
+    output += "-------------------------------------------- \n"
+    output += "|  " + fill_till("Kristiaan", 9) + " |" 
+    '''
+        <tr>
+            <td class="al_left">Kristiaan|
+            |{{data['kristiaan_last_match_kills']}}|
+            |{{data['kristiaan_last_match_deaths']}}|
+            |{{data['kristiaan_last_match_damage']}}|
+        </tr>
+        <tr>
+            <td class="al_left">Muffin|
+            |{{data['muffin_last_match_kills']}}|
+            |{{data['muffin_last_match_deaths']}}|
+            |{{data['muffin_last_match_damage']}}|
+        </tr>
+        <tr>
+            <td class="al_left">Devlin|
+            |{{data['devlin_last_match_kills']}}|
+            |{{data['devlin_last_match_deaths']}}|
+            |{{data['devlin_last_match_damage']}}|
+        </tr>
+        <tr>
+            <td class="al_left">Alex|
+            |{{out['alex_last_match_kills']}}|
+            |{{out['alex_last_match_deaths']}}|
+            |{{out['alex_last_match_damage']}}|
+        </tr>
+    '''
+
+    return output
+
+
+if __name__ == '__main__':
+    #DEBUG is SET to TRUE. CHANGE FOR PROD
+    app.run(port=5000,debug=True)
