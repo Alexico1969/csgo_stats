@@ -66,3 +66,7 @@ def last():
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD
     app.run(port=5000,debug=True)
+
+@app.route('/api',methods=['GET','POST'])
+def api():
+    return "TEST123"
