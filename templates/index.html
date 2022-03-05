@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        body{
+            text-align: left;
+            padding-left: 30px;
+        }
+
+        table{
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th{
+            background-color:beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>Steam API</h1>
+    <form method="POST"> 
+        <p><input type="number" name="player_id" placeholder="Steam ID"></p>
+        <p><button type="submit">Get Data</button></p>
+    </form>
+
+    {% if output1 %}
+        <h4>output1 ['players']</h4>
+        {% for e in output1['players'] %}
+            {% for key,value in e.items() %}
+                <p>{{ key }}:{{ value }}</p>
+            {% endfor %}
+        {% endfor %}
+        <br><br>
+        <hr>
+        <br>
+    {% endif %}
+
+
+    {% if output2 %}
+        <h4>output2</h4>
+        <table>
+            <th>Name</th><th>Value</th>
+            {%for e in output2['stats'] %}
+                
+                    <tr><td> {{ e['name'] }} </td><td> {{ e['value'] }}</td>
+            
+            {% endfor %}
+        </table>
+     {% endif %}
+</body>
+</html>
