@@ -69,4 +69,6 @@ if __name__ == '__main__':
 
 @app.route('/api',methods=['GET','POST'])
 def api():
-    return "TEST123"
+    data = get_csgo5()
+    print(">>> output1", output1)
+    return output1
