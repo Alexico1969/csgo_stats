@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last match</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h1>CSGO - Strategize - LAST MATCH</h1>
+
+    {% if output1 %}
+    {% set out = output1 %}
+    <table>
+       <h2>Rounds won: {{out['alex_last_match_wins']}}</h2>
+    </table>
+
+    <br>
+
+    <table>
+        <tr><th class="al_left">Player</th><th>Kills</th><th>Deaths</th><th>Damage done</th></tr>
+        <tr>
+            <td class="al_left">Kristiaan</td>
+            <td>{{out['kristiaan_last_match_kills']}}</td>
+            <td>{{out['kristiaan_last_match_deaths']}}</td>
+            <td>{{out['kristiaan_last_match_damage']}}</td>
+        </tr>
+        <tr>
+            <td class="al_left">Muffin</td>
+            <td>{{out['muffin_last_match_kills']}}</td>
+            <td>{{out['muffin_last_match_deaths']}}</td>
+            <td>{{out['muffin_last_match_damage']}}</td>
+        </tr>
+        <tr>
+            <td class="al_left">Devlin</td>
+            <td>{{out['devlin_last_match_kills']}}</td>
+            <td>{{out['devlin_last_match_deaths']}}</td>
+            <td>{{out['devlin_last_match_damage']}}</td>
+        </tr>
+        <tr>
+            <td class="al_left">Alex</td>
+            <td>{{out['alex_last_match_kills']}}</td>
+            <td>{{out['alex_last_match_deaths']}}</td>
+            <td>{{out['alex_last_match_damage']}}</td>
+        </tr>
+
+     </table>
+
+     <br>
+     <h3>Errors</h3>
+     {% for e in output1 %}
+        {% if e == "error" %}        
+        <p>{{ output1[e] }}</p>
+        {% endif %}
+
+    {% endfor %}
+    {% endif %}
+
+
+    {% if output2 %}
+
+    {% endif %}
+
+    {% if output3 %}
+
+    {{output3}}
+{% endif %}
+</body>
+</html>
