@@ -48,7 +48,7 @@ def home():
             output2 = "E" + str(E)
 
         try:
-            output3 = get_csgo5(id)
+            output3 = get_csgo5()
         except Exception as E:
             print(E)
             output3 = "E" + str(E)
@@ -70,5 +70,5 @@ if __name__ == '__main__':
 @app.route('/api',methods=['GET','POST'])
 def api():
     data = get_csgo5()
-    print(">>> output1", output1)
-    return output1
+    print(">>> output1", data)
+    return data
