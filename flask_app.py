@@ -2,7 +2,7 @@ import os
 import requests, json
 from flask import Flask,redirect,url_for,render_template,request
 from steam_api import get_csgo3, get_csgo4, get_csgo5
-from helper import fill_till
+from helper import fill_till, chart_url
 
 app = Flask(__name__)
 
@@ -122,7 +122,9 @@ def api():
     output += error
     output += "\n"
     output += "```"
-    output += "![Discord Logo](https://discord.com/assets/fc0b01fe10a0b8c602fb0106d8189d9b.png)" 
+    output += "\n"
+    
+    output += "![Graph](" + chart_url + ")" 
     return output
 
 
