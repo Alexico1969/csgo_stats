@@ -76,35 +76,18 @@ def api():
     output += "-------------------------------------------- \n"
     output +=  "| " + fill_till("Kristiaan", 9) 
     output += " | " + fill_till("  " + str(data['kristiaan_last_match_kills']), 5) 
-    output += " | " + fill_till("   " + str(data['kristiaan_last_match_deaths']), 6)
-    output += " | " + fill_till("     " + str(data['kristiaan_last_match_damage']), 11)
+    output += " | " + fill_till("  " + str(data['kristiaan_last_match_deaths']), 6)
+    output += " | " + fill_till("   " + str(data['kristiaan_last_match_damage']), 11)
     output += " |\n" 
-    '''
-        <tr>
-            <td class="al_left">Kristiaan|
-            |{{data['kristiaan_last_match_kills']}}|
-            |{{data['kristiaan_last_match_deaths']}}|
-            |{{data['kristiaan_last_match_damage']}}|
-        </tr>
-        <tr>
-            <td class="al_left">Muffin|
-            |{{data['muffin_last_match_kills']}}|
-            |{{data['muffin_last_match_deaths']}}|
-            |{{data['muffin_last_match_damage']}}|
-        </tr>
-        <tr>
-            <td class="al_left">Devlin|
-            |{{data['devlin_last_match_kills']}}|
-            |{{data['devlin_last_match_deaths']}}|
-            |{{data['devlin_last_match_damage']}}|
-        </tr>
-        <tr>
-            <td class="al_left">Alex|
-            |{{out['alex_last_match_kills']}}|
-            |{{out['alex_last_match_deaths']}}|
-            |{{out['alex_last_match_damage']}}|
-        </tr>
-    '''
+    output +=  "| " + fill_till("Muffin", 9) 
+    output += " | " + fill_till("  " + str(data['muffin_last_match_kills']), 5) 
+    output += " | " + fill_till("  " + str(data['muffin_last_match_deaths']), 6)
+    output += " | " + fill_till("   " + str(data['muffin_last_match_damage']), 11)
+    output += " |\n"     
+
+
+
+    output += "-------------------------------------------- \n"
     output += "```" 
     return output
 
