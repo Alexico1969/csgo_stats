@@ -73,51 +73,51 @@ def api():
     print(">>> output1", data)
     output = "```"   
 
-    output += "════════════════════════════════════════════ \n"
-    output += "| LAST ROUND STATS |   Rounds won: " + fill_till(str(data['alex_last_match_wins']), 7) + " | \n"
-    output += "════════════════════════════════════════════ \n"   
+    output += "╔══════════════════════════════════════════╗ \n"
+    output += "║ LAST ROUND STATS ║   Rounds won: " + fill_till(str(data['alex_last_match_wins']), 7) + " ║ \n"
+    output += "╚══════════════════════════════════════════╝ \n"   
     output += "\n"
-    output += "════════════════════════════════════════════ \n"
-    output += "| Player    | Kills | Deaths | Damage done | \n"
-    output += "════════════════════════════════════════════ \n"
+    output += "╔══════════════════════════════════════════╗ \n"
+    output += "║ Player    ║ Kills ║ Deaths ║ Damage done ║ \n"
+    output += "╚══════════════════════════════════════════╝ \n"
     if 'kristiaan_last_match_kills' in data:
-        output +=  "| " + fill_till("Kristiaan", 9) 
-        output += " |   " + fill_till(str(data['kristiaan_last_match_kills']), 3) 
-        output += " |   " + fill_till(str(data['kristiaan_last_match_deaths']), 4)
-        output += " | " + fill_till("   " + str(data['kristiaan_last_match_damage']), 11)
-        output += " |\n" 
+        output +=  "║ " + fill_till("Kristiaan", 9) 
+        output += " ║   " + fill_till(str(data['kristiaan_last_match_kills']), 3) 
+        output += " ║   " + fill_till(str(data['kristiaan_last_match_deaths']), 4)
+        output += " ║ " + fill_till("   " + str(data['kristiaan_last_match_damage']), 11)
+        output += " ║\n" 
     else:
         error +=  "Kristiaan's Steam profile is set to private\n"
 
     if 'muffin_last_match_kills' in data:
-        output +=  "| " + fill_till("Muffin", 9) 
-        output += " |   " + fill_till(str(data['muffin_last_match_kills']), 3) 
-        output += " |   " + fill_till(str(data['muffin_last_match_deaths']), 4)
-        output += " | " + fill_till("   " + str(data['muffin_last_match_damage']), 11)
-        output += " |\n"
+        output +=  "║ " + fill_till("Muffin", 9) 
+        output += " ║   " + fill_till(str(data['muffin_last_match_kills']), 3) 
+        output += " ║   " + fill_till(str(data['muffin_last_match_deaths']), 4)
+        output += " ║ " + fill_till("   " + str(data['muffin_last_match_damage']), 11)
+        output += " ║\n"
     else:
         error +=  "Muffin's Steam profile is set to private\n"
 
     if 'devlin_last_match_kills' in data:
-        output +=  "| " + fill_till("Devlin", 9) 
-        output += " |   " + fill_till(str(data['devlin_last_match_kills']), 3) 
-        output += " |   " + fill_till(str(data['devlin_last_match_deaths']), 4)
-        output += " | " + fill_till("   " + str(data['devlin_last_match_damage']), 11)
-        output += " |\n" 
+        output +=  "║ " + fill_till("Devlin", 9) 
+        output += " ║   " + fill_till(str(data['devlin_last_match_kills']), 3) 
+        output += " ║   " + fill_till(str(data['devlin_last_match_deaths']), 4)
+        output += " ║ " + fill_till("   " + str(data['devlin_last_match_damage']), 11)
+        output += " ║\n" 
     else:
         error +=  "Devlin's Steam profile is set to private\n"
 
 
     if 'alex_last_match_kills' in data:
-        output +=  "| " + fill_till("Alex", 9) 
-        output += " |   " + fill_till(str(data['alex_last_match_kills']), 3) 
-        output += " |   " + fill_till(str(data['alex_last_match_deaths']), 4)
-        output += " | " + fill_till("   " + str(data['alex_last_match_damage']), 11)
-        output += " |\n"  
+        output +=  "║ " + fill_till("Alex", 9) 
+        output += " ║   " + fill_till(str(data['alex_last_match_kills']), 3) 
+        output += " ║   " + fill_till(str(data['alex_last_match_deaths']), 4)
+        output += " ║ " + fill_till("   " + str(data['alex_last_match_damage']), 11)
+        output += " ║\n"  
     else:
         error +=  "Alex' Steam profile is set to private\n"
 
-    output += "════════════════════════════════════════════ \n"
+    output += "╚══════════════════════════════════════════╝ \n"
     output += "\n"
     output += error
     output += "\n"
