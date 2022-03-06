@@ -4,6 +4,7 @@ def fill_till(string, wanted_length):
     string_length = len(string)
     if string_length == 1:
         string = " " + string
+        string_length = 2
     spaces_to_add = wanted_length - string_length
     output += spaces_to_add * " "
     return output
