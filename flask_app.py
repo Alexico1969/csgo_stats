@@ -75,9 +75,9 @@ def api():
     output += "| Player    | Kills | Deaths | Damage done | \n"
     output += "-------------------------------------------- \n"
     output +=  "| " + fill_till("Kristiaan", 9) 
-    output += " | " + fill_till({{data['kristiaan_last_match_kills']}}, 5) 
-    output += " | " + fill_till({{data['kristiaan_last_match_deaths']}}, 6)
-    output += " | " + fill_till({{data['kristiaan_last_match_damage']}}, 6)
+    output += " | " + fill_till(data['kristiaan_last_match_kills'], 5) 
+    output += " | " + fill_till(data['kristiaan_last_match_deaths'], 6)
+    output += " | " + fill_till(data['kristiaan_last_match_damage'], 6)
     output += " |\n" 
     '''
         <tr>
