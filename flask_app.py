@@ -69,11 +69,12 @@ def last():
 @app.route('/api',methods=['GET','POST'])
 def api():
     data = get_csgo5()
+    error = ""
     print(">>> output1", data)
-    output = "```"
+    output = "```"   
 
     output += "-------------------------------------------- \n"
-    output += "| LAST ROUND STATS | Rounds won: " + fill_till(str(data['alex_last_match_wins']), 7) + " | \n"
+    output += "| LAST ROUND STATS |   Rounds won: " + fill_till(str(data['alex_last_match_wins']), 7) + " | \n"
     output += "-------------------------------------------- \n"   
     output += "\n"
     output += "-------------------------------------------- \n"
@@ -86,7 +87,7 @@ def api():
         output += " | " + fill_till("   " + str(data['kristiaan_last_match_damage']), 11)
         output += " |\n" 
     else:
-        output +=  "| Kristiaan |>  Steam profile is private  <|\n"
+        error +=  "Kristiaan's Steam profile is set to private\n"
 
     if 'muffin_last_match_kills' in data:
         output +=  "| " + fill_till("Muffin", 9) 
@@ -95,7 +96,7 @@ def api():
         output += " | " + fill_till("   " + str(data['muffin_last_match_damage']), 11)
         output += " |\n"
     else:
-        output +=  "| Muffin    |>  Steam profile is private  <|\n"
+        error +=  "Muffin's Steam profile is set to private\n"
 
     if 'devlin_last_match_kills' in data:
         output +=  "| " + fill_till("Alex", 9) 
@@ -104,7 +105,7 @@ def api():
         output += " | " + fill_till("   " + str(data['devlin_last_match_damage']), 11)
         output += " |\n" 
     else:
-        output +=  "| Devlin    |>  Steam profile is private  <|\n"
+        error +=  "Devlin's Steam profile is set to private\n"
 
 
     if 'alex_last_match_kills' in data:
@@ -114,9 +115,11 @@ def api():
         output += " | " + fill_till("   " + str(data['alex_last_match_damage']), 11)
         output += " |\n"  
     else:
-        output +=  "| Alex      |>  Steam profile is private  <|\n"
+        error +=  "Alex' Steam profile is set to private\n"
 
     output += "-------------------------------------------- \n"
+    output += "\n"
+    output += error
     output += "```" 
     return output
 
