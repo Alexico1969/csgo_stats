@@ -74,17 +74,30 @@ def api():
     output += "-------------------------------------------- \n"
     output += "| Player    | Kills | Deaths | Damage done | \n"
     output += "-------------------------------------------- \n"
-    output +=  "| " + fill_till("Kristiaan", 9) 
-    output += " | " + fill_till("  " + str(data['kristiaan_last_match_kills']), 5) 
-    output += " | " + fill_till("  " + str(data['kristiaan_last_match_deaths']), 6)
-    output += " | " + fill_till("   " + str(data['kristiaan_last_match_damage']), 11)
-    output += " |\n" 
-    output +=  "| " + fill_till("Muffin", 9) 
-    output += " | " + fill_till("  " + str(data['muffin_last_match_kills']), 5) 
-    output += " | " + fill_till("  " + str(data['muffin_last_match_deaths']), 6)
-    output += " | " + fill_till("   " + str(data['muffin_last_match_damage']), 11)
-    output += " |\n"     
-
+    if data['kristiaan_last_match_kills']:
+        output +=  "| " + fill_till("Kristiaan", 9) 
+        output += " | " + fill_till("  " + str(data['kristiaan_last_match_kills']), 5) 
+        output += " | " + fill_till("  " + str(data['kristiaan_last_match_deaths']), 6)
+        output += " | " + fill_till("   " + str(data['kristiaan_last_match_damage']), 11)
+        output += " |\n" 
+    if data['muffin_last_match_kills']:
+        output +=  "| " + fill_till("Muffin", 9) 
+        output += " | " + fill_till("  " + str(data['muffin_last_match_kills']), 5) 
+        output += " | " + fill_till("  " + str(data['muffin_last_match_deaths']), 6)
+        output += " | " + fill_till("   " + str(data['muffin_last_match_damage']), 11)
+        output += " |\n"     
+    if data['devlin_last_match_kills']:
+        output +=  "| " + fill_till("Alex", 9) 
+        output += " | " + fill_till("  " + str(data['devlin_last_match_kills']), 5) 
+        output += " | " + fill_till("  " + str(data['devlin_last_match_deaths']), 6)
+        output += " | " + fill_till("   " + str(data['devlin_last_match_damage']), 11)
+        output += " |\n" 
+    if data['alex_last_match_kills']:
+        output +=  "| " + fill_till("Muffin", 9) 
+        output += " | " + fill_till("  " + str(data['alex_last_match_kills']), 5) 
+        output += " | " + fill_till("  " + str(data['alex_last_match_deaths']), 6)
+        output += " | " + fill_till("   " + str(data['alex_last_match_damage']), 11)
+        output += " |\n"  
 
 
     output += "-------------------------------------------- \n"
