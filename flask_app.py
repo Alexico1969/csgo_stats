@@ -125,6 +125,17 @@ def api():
     output += "\n"
     return output
 
+@app.route('/api1', methods=['POST', 'GET'])
+def api2():
+    return '''╔══╦══╦══╦══╦══╗
+║  ║  ║  ║  ║  ║
+╠══╬══╬══╬══╬══╣
+║  ║  ║  ║  ║  ║
+╠══╬══╬══╬══╬══╣
+║  ║  ║  ║  ║  ║
+╠══╬══╬══╬══╬══╣
+║  ║  ║  ║  ║  ║
+╚══╩══╩══╩══╩══╝'''
 
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD
