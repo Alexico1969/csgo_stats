@@ -101,7 +101,7 @@ def api():
             |{{out['alex_last_match_damage']}}|
         </tr>
     '''
-
+    output += "```" 
     return output
 
 
