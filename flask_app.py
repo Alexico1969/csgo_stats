@@ -71,6 +71,11 @@ def api():
     data = get_csgo5()
     print(">>> output1", data)
     output = "```"
+
+    output += "-------------------------------------------- \n"
+    output += "| LAST ROUND STATS | Rounds won: " + fill_till(str(data['alex_last_match_wins']), 7 + " | \n"
+    output += "-------------------------------------------- \n"   
+    output += "\n"
     output += "-------------------------------------------- \n"
     output += "| Player    | Kills | Deaths | Damage done | \n"
     output += "-------------------------------------------- \n"
