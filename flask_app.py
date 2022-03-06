@@ -80,7 +80,7 @@ def api():
         output += " | " + fill_till("  " + str(data['kristiaan_last_match_deaths']), 6)
         output += " | " + fill_till("   " + str(data['kristiaan_last_match_damage']), 11)
         output += " |\n" 
-        
+
     if 'muffin_last_match_kills' in data:
         output +=  "| " + fill_till("Muffin", 9) 
         output += " | " + fill_till("  " + str(data['muffin_last_match_kills']), 5) 
@@ -97,7 +97,7 @@ def api():
         output += " | " + fill_till("   " + str(data['devlin_last_match_damage']), 11)
         output += " |\n" 
     if data['alex_last_match_kills']:
-        output +=  "| " + fill_till("Muffin", 9) 
+        output +=  "| " + fill_till("Devlin", 9) 
         output += " | " + fill_till("  " + str(data['alex_last_match_kills']), 5) 
         output += " | " + fill_till("  " + str(data['alex_last_match_deaths']), 6)
         output += " | " + fill_till("   " + str(data['alex_last_match_damage']), 11)
