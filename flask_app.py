@@ -123,8 +123,6 @@ def api():
     output += "\n"
     output += "```"
     output += "\n"
-    
-    output += "![Graph](" + chart_url + ")" 
     return output
 
 

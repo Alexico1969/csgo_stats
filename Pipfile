@@ -7,6 +7,9 @@ verify_ssl = true
 
 [packages]
 requests = "*"
+flask = "*"
+quickchart = "*"
+quickchart-io = "*"
 
 [requires]
 python_version = "3.8"
