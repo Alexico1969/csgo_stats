@@ -73,7 +73,7 @@ def api():
     output = "```"
 
     output += "-------------------------------------------- \n"
-    output += "| LAST ROUND STATS | Rounds won: " + fill_till(str(data['alex_last_match_wins']), 7 + " | \n"
+    output += "| LAST ROUND STATS | Rounds won: " + fill_till(str(data['alex_last_match_wins']), 7) + " | \n"
     output += "-------------------------------------------- \n"   
     output += "\n"
     output += "-------------------------------------------- \n"
