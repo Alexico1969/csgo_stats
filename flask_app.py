@@ -121,8 +121,8 @@ def api():
     output += "\n"
     output += error
     output += "\n"
-    output += "![Discord Logo](https://discord.com/assets/fc0b01fe10a0b8c602fb0106d8189d9b.png)"
-    output += "```" 
+    output += "```"
+     output += "![Discord Logo](https://discord.com/assets/fc0b01fe10a0b8c602fb0106d8189d9b.png)" 
     return output
 
 
