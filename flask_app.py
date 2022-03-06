@@ -99,7 +99,7 @@ def api():
         error +=  "Muffin's Steam profile is set to private\n"
 
     if 'devlin_last_match_kills' in data:
-        output +=  "| " + fill_till("Alex", 9) 
+        output +=  "| " + fill_till("Devlin", 9) 
         output += " | " + fill_till("  " + str(data['devlin_last_match_kills']), 5) 
         output += " | " + fill_till("  " + str(data['devlin_last_match_deaths']), 6)
         output += " | " + fill_till("   " + str(data['devlin_last_match_damage']), 11)
@@ -109,7 +109,7 @@ def api():
 
 
     if 'alex_last_match_kills' in data:
-        output +=  "| " + fill_till("Devlin", 9) 
+        output +=  "| " + fill_till("Alex", 9) 
         output += " | " + fill_till("  " + str(data['alex_last_match_kills']), 5) 
         output += " | " + fill_till("  " + str(data['alex_last_match_deaths']), 6)
         output += " | " + fill_till("   " + str(data['alex_last_match_damage']), 11)
