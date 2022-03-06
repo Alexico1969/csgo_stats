@@ -88,7 +88,7 @@ def api():
         output += " | " + fill_till("   " + str(data['muffin_last_match_damage']), 11)
         output += " |\n"
     else:
-        output +=  "| Player's Steam profile is set to private |\n"
+        output +=  "| Muffin    | Steam profile is private  |\n"
 
     if data['devlin_last_match_kills']:
         output +=  "| " + fill_till("Alex", 9) 
