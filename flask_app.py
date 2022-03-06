@@ -2,7 +2,7 @@ import os
 import requests, json
 from flask import Flask,redirect,url_for,render_template,request
 from steam_api import get_csgo3, get_csgo4, get_csgo5
-from helper import fill_till, chart_url
+from helper import fill_till
 
 app = Flask(__name__)
 
