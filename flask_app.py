@@ -74,12 +74,14 @@ def api():
     output += "-------------------------------------------- \n"
     output += "| Player    | Kills | Deaths | Damage done | \n"
     output += "-------------------------------------------- \n"
-    if data['kristiaan_last_match_kills']:
+    if 'kristiaan_last_match_kills' in data:
         output +=  "| " + fill_till("Kristiaan", 9) 
         output += " | " + fill_till("  " + str(data['kristiaan_last_match_kills']), 5) 
         output += " | " + fill_till("  " + str(data['kristiaan_last_match_deaths']), 6)
         output += " | " + fill_till("   " + str(data['kristiaan_last_match_damage']), 11)
         output += " |\n" 
+    else:
+        output +=  "| Kristiaan |> Steam profile is private  <|\n"
 
     if 'muffin_last_match_kills' in data:
         output +=  "| " + fill_till("Muffin", 9) 
@@ -88,21 +90,26 @@ def api():
         output += " | " + fill_till("   " + str(data['muffin_last_match_damage']), 11)
         output += " |\n"
     else:
-        output +=  "| Muffin    | Steam profile is private  |\n"
+        output +=  "| Muffin    |> Steam profile is private  <|\n"
 
-    if data['devlin_last_match_kills']:
+    if 'devlin_last_match_kills' in data:
         output +=  "| " + fill_till("Alex", 9) 
         output += " | " + fill_till("  " + str(data['devlin_last_match_kills']), 5) 
         output += " | " + fill_till("  " + str(data['devlin_last_match_deaths']), 6)
         output += " | " + fill_till("   " + str(data['devlin_last_match_damage']), 11)
         output += " |\n" 
-    if data['alex_last_match_kills']:
+    else:
+        output +=  "| Devlin    |> Steam profile is private  <|\n"
+
+
+    if 'alex_last_match_kills' in data:
         output +=  "| " + fill_till("Devlin", 9) 
         output += " | " + fill_till("  " + str(data['alex_last_match_kills']), 5) 
         output += " | " + fill_till("  " + str(data['alex_last_match_deaths']), 6)
         output += " | " + fill_till("   " + str(data['alex_last_match_damage']), 11)
         output += " |\n"  
-
+    else:
+        output +=  "| Alex      |> Steam profile is private  <|\n"
 
     output += "-------------------------------------------- \n"
     output += "```" 
