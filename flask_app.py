@@ -73,13 +73,13 @@ def api():
     print(">>> output1", data)
     output = "```"   
 
-    output += "-------------------------------------------- \n"
+    output += "════════════════════════════════════════════ \n"
     output += "| LAST ROUND STATS |   Rounds won: " + fill_till(str(data['alex_last_match_wins']), 7) + " | \n"
-    output += "-------------------------------------------- \n"   
+    output += "════════════════════════════════════════════ \n"   
     output += "\n"
-    output += "-------------------------------------------- \n"
+    output += "════════════════════════════════════════════ \n"
     output += "| Player    | Kills | Deaths | Damage done | \n"
-    output += "-------------------------------------------- \n"
+    output += "════════════════════════════════════════════ \n"
     if 'kristiaan_last_match_kills' in data:
         output +=  "| " + fill_till("Kristiaan", 9) 
         output += " |   " + fill_till(str(data['kristiaan_last_match_kills']), 3) 
@@ -117,7 +117,7 @@ def api():
     else:
         error +=  "Alex' Steam profile is set to private\n"
 
-    output += "-------------------------------------------- \n"
+    output += "════════════════════════════════════════════ \n"
     output += "\n"
     output += error
     output += "\n"
